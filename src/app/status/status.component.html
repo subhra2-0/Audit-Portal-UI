@@ -1,0 +1,30 @@
+<table>
+    <tr class="r">
+        <td><a [routerLink]="['/home']"class="nav-link" style="color:white"><strong>Home</strong></a></td>
+        <td class="container" style="color: aliceblue;">
+            <h2 class="text-center">Audit  Management System</h2>
+        <td><a [routerLink]="['/questions']" style="color:white" class="nav-link"><strong>Questions</strong></a></td>
+        <td><a [routerLink]="['/logout']" style="color:white" class="nav-link"><strong>Logout</strong></a></td>
+        
+    </tr>
+</table>
+<div class="body">
+    <h1 style="text-align: center;">Audit Execution Status</h1>
+<div class="row justify-content-center">
+    <div class="col-auto">
+    <table class="table table-bordered Table">
+        <thead class="first">
+            <th scope="col">Project Execution Status</th>
+            <th scope="col">Remedial Action Duration</th>
+        </thead>
+        <tbody>
+                <tr [style.background]="this.auditResponse.projectExecutionStatus">
+              
+                <td style="color:white"><strong>{{this.auditResponse.projectExecutionStatus}}</strong></td>
+                <td style="color:white"><strong>{{this.auditResponse.remedialActionDuration}}</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>

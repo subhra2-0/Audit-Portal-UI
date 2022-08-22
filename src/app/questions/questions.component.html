@@ -1,0 +1,90 @@
+<table>
+    <tr class="r"><td><a [routerLink]="['/home']"class="nav-link" style="color:white"><strong>Home</strong></a></td>
+       
+        <td class="container" style="color: aliceblue;"><h2 class="text-center">Audit Management System</h2>
+        <td><a [routerLink]="['/logout']" style="color:white" class="nav-link"><strong>Logout</strong></a></td>
+    </tr>
+</table>
+
+<div class="container">
+    <h1 style="text-align: center;">{{auditType.auditType}} Audit Questions</h1><br><br>
+    <div class="row col-md-12">
+            <br><br><br><br>
+            <table class="table">
+                <thead>
+                    <tr class="firstrow">
+                        <th>Question ID</th>
+                        <th>Question</th>
+                        <th>Response</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1</strong></td>
+                        <td><strong>{{questionsData[0].question}}</strong></td>
+                        <td>
+                            <select id="response" name="response" [(ngModel)]="questionsData[0].response" required>
+                              
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                  
+                    <tr>
+                        <td>2</td>
+                        <td>{{questionsData[1].question}}</td>
+                        <td>
+                            <select id="response" name="response" [(ngModel)]="questionsData[1].response" required>
+                               
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>3</strong></td>
+                        <td><strong>{{questionsData[2].question}}</strong></td>
+                        <td>
+                            <select id="response" name="response" [(ngModel)]="questionsData[2].response" required>
+                               
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>{{questionsData[3].question}}</td>
+                        <td>
+                            <select id="response" name="response" [(ngModel)]="questionsData[3].response" required>
+                                
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>5</strong></td>
+                        <td><strong>{{questionsData[4].question}}</strong></td>
+                        <td>
+                            <select id="response" name="response" [(ngModel)]="questionsData[4].response" required>
+                                
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <div >
+                &nbsp;&nbsp;
+                <input class="btn btn-success" type="submit" style="text-align: center;" name="submit_reg" value="Submit" (click)="showResponse()">
+            </div>
+            
+            </div>
+            <h5 class="invalid" *ngIf="isNotValid">Please Attempt all the questions to get the execution status</h5>
+            </div>
+            

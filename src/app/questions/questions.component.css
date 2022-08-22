@@ -1,0 +1,17 @@
+.firstrow{
+  background-color:cornflowerblue;
+}
+.table{
+ text-align: center;
+
+}
+.r{
+  background-color: darkslateblue;
+}
+.heading{
+  text-align: center;
+}
+.invalid{
+  color: red;
+  text-align: center;
+}
